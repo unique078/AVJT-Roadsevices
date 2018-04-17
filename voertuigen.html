@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i|Oswald:700,400"
+          rel="stylesheet">
+    <!-- FontAwesome -->
+    <link href="fontawesome5/win/css/font-awesome-core.css" rel="stylesheet" type="text/css">
+    <link href="fontawesome5/win/css/font-awesome-light.css" rel="stylesheet" type="text/css">
+    <link href="css/dashboard.css" rel="stylesheet">
+    <link href="css/responsive.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+    <a href="#" class="logo"><img src="images/dashboard/logo.png"></a>
+    <a href="#" class="servicelocatie">
+        <img src="images/dashboard/icon_search.png">
+        <span>&nbsp; ZOEK SERVICELOCATIE</span>
+    </a>
+
+    <div class="loggedin">
+        <select title="" class="language">
+            <option>NL</option>
+        </select>
+        <div class="name">
+            <span>Arjan van Pouderoyen</span>
+            <a href="#" class="logout">Uitloggen</a>
+        </div>
+    </div>
+
+    <a class="nav-button" id="click" type="button">
+        <span class="hamburger-one"></span>
+        <span class="hamburger-two"></span>
+        <span class="hamburger-three"></span>
+    </a>
+</div>
+<div class="content voertuigen">
+    <div class="overlay"></div>
+    <div class="leftcol">
+        <div class="hide">
+            <a href="#" class="servicelocatie">
+                <i class="fal fa-search"></i>
+                <span>&nbsp; ZOEK SERVICELOCATIE</span>
+            </a>
+            <div class="loggedin">
+                <select title="" class="language">
+                    <option>NL</option>
+                </select>
+                <div class="name">
+                    <p class="klantnummer">Arjan van Pouderoyen</p>
+                </div>
+            </div>
+        </div>
+        <p class="klantnummer">Klantnummer: 3706</p>
+        <ul class="menu">
+            <li class="first_dboard2">
+                <a class="active" href="/mijnpagina.php?onderdeel=">
+                    <img src="images/dashboard/icon_dashboard.png">
+                    <span class="dboard1">&nbsp;DASHBOARD</span>
+                </a>
+            </li>
+            <li class="second">
+                <a class="active" href="/mijnpagina.php?onderdeel=">
+                    <img src="images/dashboard/icon_euroshell.png">
+                    <span class="dboard1">&nbsp; EUROSHELL CARDS</span>
+                </a>
+            </li>
+            <li class="first">
+                <a href="/mijnpagina.php?onderdeel=voertuigen">
+                    <img src="images/dashboard/icon_vehicles_active.png">
+                    <span class="dboard2">&nbsp;VOERTUIGEN</span>
+                </a>
+            </li>
+
+            <li class="dropdown fourth">
+                <a href="/mijnpagina.php?onderdeel=wasgeschiedenis">
+                    <img src="images/dashboard/icon_fleetwash.png">
+                    <span class="dropbtn">&nbsp;FLEETWASH</span>
+                </a>
+                <ul class="dropdown-content">
+                    <li><a href="/mijnpagina.php?onderdeel=wasgeschiedenis">Wasgeschiedenis</a></li>
+                    <li><a href="/mijnpagina.php?onderdeel=washtickets">Washtickets</a></li>
+                </ul>
+            </li>
+            <li class="fifth">
+                <a href="/mijnpagina.php?onderdeel=">
+                    <img src="images/dashboard/icon_tankcleaning.png">
+                    <span class="dboard1">&nbsp;TANKCLEANING</span>
+                </a>
+            </li>
+            <li class="sixth">
+                <a href="/mijnpagina.php?onderdeel=repair">
+                    <img src="images/dashboard/icon_repair.png">
+                    <span class="dboard11">&nbsp;REPAIR</span>
+                </a>
+            </li>
+            <li class="seventh">
+                <a href="/mijnpagina.php?onderdeel=klantcodes">
+                    <img src="images/dashboard/icon_references.png">
+                    <span class="dboard26">&nbsp;AVJT REFERENTIES</span>
+                </a>
+            </li>
+            <li class="eight">
+                <a href="/mijnpagina.php?onderdeel=chauffeurs">
+                    <img src="images/dashboard/icon_drivers.png">
+                    <span class="dboard4">&nbsp;CHAUFFEURS</span>
+                </a>
+            </li>
+            <li class="uitloggen">
+                <a href="/mijnpagina.php?onderdeel=uitloggen">
+                    <span class="dboard8">UITLOGGEN</span>
+                </a>
+            </li>
+
+        </ul>
+        <span class="copyright">&copy; 2010 - 2018 AVJT Roadservices</span>
+    </div>
+    <div class="rightcol voertuigen">
+        <!-- dynamisch extra class voor specifieke styling: dashboard, voertuigen -->
+
+        <!-- voertuigen -->
+        <div class="title">
+            <h2>VOERTUIGEN & WASSCHEMA'S</h2>
+            <a class="btn btn-green voertuigenToevoegen" href="/mijnpagina.php?onderdeel=voertuigen&act=addvoertuig">
+                <img src="images/dashboard/icon_vehicles.png">
+                <span>VOERTUIG TOEVOEGEN</span>
+            </a>
+        </div>
+        <p>Hier vindt u een overzicht van alle voertuigen in uw account en wanneer een voertuig weer gewassen mag
+            worden. U kunt per voertuig een maximale wasfrequentie instellen om onnodig wassen (dubbel wassingen) te
+            voorkomen.
+            <br><strong><span>Let op:</span> Elk trekkend voertuig dient altijd te worden ingevoerd in uw account om
+                te worden
+                geaccepteerd in ons netwerk.</strong><br>Getrokken voertuigen (opleggers, aanhangwagens etc.) worden
+            altijd geaccepteerd in ons netwerk, mits deze getrokken worden door een voertuig uit uw account.
+        </p>
+        <div class="whiteblock">
+            <form method=POST action="/mijnpagina.php?onderdeel=voertuigen">
+                <div class="zoeken">
+                    <input type=hidden name=formact value=zoekvoertuigen>
+                    <h5 class="inline">ZOEK BINNEN UW VOERTUIGEN</h5>
+                    <div id="showZoekenVoertuigen" class="zoekenVoertuigen">
+                        <input class="txt" name="kenteken" type="text" value="Vul uw kenteken in"
+                               onfocus="if(this.value=='Vul kenteken in') this.value=''"
+                               onblur="if(this.value=='') this.value='Vul kenteken in'">
+                        <select size=1 name=standplaats>
+                            <option value="">Alle standplaatsen</option>
+                            <option value="">--------------------</option>
+                            <option value="Alblasserdam">Alblasserdam</option>
+                            <option value="dfdsafdsfsd">dfdsafdsfsd</option>
+                            <option value="Dordrecht">Dordrecht</option>
+                            <option value="xxx">xxx</option>
+                            <option value="Zwijndrecht">Zwijndrecht</option>
+                            <option value="Zwitserland">Zwitserland</option>
+                        </select>
+                        <select size=1 name=vlootnummer>
+                            <option value="">Vlootnummer</option>
+                            <option value="">--------------------</option>
+                            <option value="112">112</option>
+                            <option value="abc">abc</option>
+                            <option value="huha">huha</option>
+                            <option value="test">test</option>
+                            <option value="yyy">yyy</option>
+                        </select>
+                        <select size=1 name=type>
+                            <option value="">Alle voertuigtypes</option>
+                            <option value="">--------------------</option>
+                            <option value="22">KIPPER MOTORWAGEN</option>
+                            <option value="38">KIPPER OPLEGGER LOS</option>
+                            <option value="16">VEEGWAGEN</option>
+                            <option value="17">VUILNISWAGEN</option>
+                            <option value="40">AUTOTRANSPORT MOTORWAGEN</option>
+                            <option value="41">AUTOTRANSPORT AANHANGWAGEN</option>
+                            <option value="53">BUS TOT 20 PERSONEN</option>
+                            <option value="19">BESTEL/ PERSONENAUTO</option>
+                            <option value="1">BESTELBUS</option>
+                            <option value="2">BAKWAGEN (B-RIJBEWIJS)</option>
+                            <option value="28">TREKKER LOS (B-rijbewijs)</option>
+                            <option value="29">OPLEGGER LOS (BE-rijbewijs)</option>
+                            <option value="3">TREKKER LOS</option>
+                            <option value="6">MOTORWAGEN</option>
+                            <option value="8">AANHANGWAGEN</option>
+                            <option value="9">OPLEGGER LOS</option>
+                            <option value="27">BULK OPLEGGER LOS</option>
+                            <option value="30">VEE MOTORWAGEN</option>
+                        </select>
+                        <select size=1 name=toon_selectie>
+                            <option value="0">Toon selectie</option>
+                            <option value="">--------------------</option>
+                            <option value="1">Geen selectie voorkeur</option>
+                            <option value="2">Reiniging gewenst aan de binnen- of buitenzijde</option>
+                            <option value="3">Reiniging gewenst aan de buitenzijde</option>
+                            <option value="4">Reiniging laadruimte gewenst</option>
+                        </select>
+                        <input class="btn" type="submit" value="ZOEKEN">
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="aantal">
+            <div class="page">Weergave: <span>1 - 50</span> van <span>93</span> voertuigen</div>
+        </div>
+
+        <form method="POST" action="/mijnpagina.php?onderdeel=voertuigen&page2=1">
+            <div class="wijzigen">
+                <input type=hidden name=formact value=update_wasfrequentie>
+                <div class="scrollflow">
+                    <table class="overzicht">
+                        <tr class="title-row">
+                            <td class="first">
+                                <input type="checkbox"
+                                       onclick="window.location='/mijnpagina.php?onderdeel=voertuigen&page2=1&checkall=1';">
+                            </td>
+                            <td>&nbsp;</td>
+                            <td>Kenteken</td>
+                            <td>Vlootnr</td>
+                            <td>Standplaats</td>
+                            <td>Reiniging buitenzijde</td>
+                            <td>Reiniging laadruimte</td>
+                            <td>euroShell card</td>
+                            <td>Beheerder</td>
+                            <td></td>
+                        </tr>
+                        <tr class="color">
+                            <td class="first"><input type="checkbox" name="voertuigenArray[60109]" value="60109"></td>
+                            <td><img src="images/dashboard/icon_forklift.png" alt="BESTEL/ PERSONENAUTO"></td>
+                            <td class="kenteken">
+                                <a href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=60109">111112</a>
+                            </td>
+                            <td>test</td>
+                            <td>Alblasserdam</td>
+                            <td><img class="checkimg" src="images/dashboard/icon_check.png" alt="check"><a
+                                    class="checked"
+                                    title="Reiniging mogelijk"
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=60109">
+                                &nbsp;</a></td>
+                            <td><a class="blocked"
+                                   href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=60109">
+                                <img src="images/dashboard/icon_warning.png"></a></td>
+                            <td>7002181111111111121</td>
+                            <td>Arjan test beheerderx</td>
+                            <td><img src="images/dashboard/icon_arrow_right.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="first"><input type="checkbox" name="voertuigenArray[60111]" value="60111"></td>
+                            <td><img src="images/dashboard/icon_forklift.png" alt="BUS TOT 20 PERSONEN"></td>
+                            <td class="kenteken"><a
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=60111">111114</a>
+                            </td>
+                            <td>test</td>
+                            <td>Zutphen</td>
+                            <td><img class="checkimg" src="images/dashboard/icon_check.png" alt="check"><a
+                                    class="checked"
+                                    title="Reiniging mogelijk"
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=60111">
+                                &nbsp;</a></td>
+                            <td></td>
+                            <td>7002181111111111121</td>
+                            <td>Arjan van Pouderoyen</td>
+                            <td><img src="images/dashboard/icon_arrow_right.png"></td>
+                        </tr>
+                        <tr class="color">
+                            <td class="first"><input type="checkbox" name="voertuigenArray[49570]" value="49570"></td>
+                            <td><img src="images/dashboard/icon_forklift.png" alt="TREKKER LOS"></td>
+                            <td class="kenteken"><a
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=49570">AABB01</a>
+                            </td>
+                            <td>test</td>
+                            <td>Zwijndrecht</td>
+                            <td><img class="checkimg" src="images/dashboard/icon_check.png" alt="check"><a
+                                    class="checked"
+                                    title="Reiniging mogelijk"
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=49570">2
+                                wk</a></td>
+                            <td><a class="blocked"
+                                   href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=49570"></a>
+                            </td>
+                            <td>7002181111111111121</td>
+                            <td>Piet Planner</td>
+                            <td><img src="images/dashboard/icon_arrow_right.png"></td>
+                        </tr>
+                        <tr>
+                            <td class="first"><input type="checkbox" name="voertuigenArray[49571]" value="49571"></td>
+                            <td><img src="images/dashboard/icon_forklift.png" alt="TREKKER LOS"></td>
+                            <td class="kenteken"><a
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=49571">AABB02</a>
+                            </td>
+                            <td>test</td>
+                            <td>Zwijndrecht</td>
+                            <td><img class="checkimg" src="images/dashboard/icon_check.png" alt="check"><a
+                                    class="checked"
+                                    title="Reiniging mogelijk"
+                                    href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=49571">2
+                                wk</a></td>
+                            <td><a class="checked" title="Reiniging mogelijk"
+                                   href="/mijnpagina.php?onderdeel=voertuigen&act=editvoertuig&voertuigid=49571">
+                                <img src="images/dashboard/icon_check.png">
+                            </a>
+                            </td>
+                            <td>7002181111111111121</td>
+                            <td>Piet Planner</td>
+                            <td><img src="images/dashboard/icon_arrow_right.png"></td>
+                        </tr>
+                        <tr class="tableFooter">
+                            <td colspan="10">
+                                <div class="wijzig">
+                                    <a class="btn btn-green download voertuigenToevoegen" target=_blank
+                                       href="/download.php?export=voertuigen">
+                                        <img src="images/dashboard/icon_download.png">
+                                        <span>DOWNLOAD OVERZICHT</span>
+                                    </a>
+
+                                    <h4>Wijzig wasfrequentie geselecteerde voertuigen:</h4>
+                                    <div>
+                                        <select size=1 name=kies_wasfrequentie>
+                                            <option value="">Selecteer wasfrequentie...</option>
+                                            <option value="" style="background:#cccccc;" disabled>BUITENZIJDE</option>
+                                            <option value="buiten0">Buitenzijde: Onbeperkt</option>
+                                            <option value="buiten7">Buitenzijde: 1x per week</option>
+                                            <option value="buiten14">Buitenzijde: Elke 2 weken</option>
+                                            <option value="buiten21">Buitenzijde: Elke 3 weken</option>
+                                            <option value="buiten28">Buitenzijde: Elke 4 weken</option>
+                                            <option value="buiten35">Buitenzijde: Elke 5 weken</option>
+                                            <option value="buiten42">Buitenzijde: Elke 6 weken</option>
+                                            <option value="buiten49">Buitenzijde: Elke 7 weken</option>
+                                            <option value="buiten56">Buitenzijde: Elke 8 weken</option>
+                                            <option value="buiten63">Buitenzijde: Elke 9 weken</option>
+                                            <option value="buiten70">Buitenzijde: Elke 10 weken</option>
+                                            <option value="buiten90">Buitenzijde: Elke 3 maanden</option>
+                                            <option value="buiten120">Buitenzijde: Elke 4 maanden</option>
+                                            <option value="buiten150">Buitenzijde: Elke 5 maanden</option>
+                                            <option value="buiten180">Buitenzijde: Elke 6 maanden</option>
+                                            <option value="" style="background:#cccccc;" disabled>BINNENZIJDE
+                                                LAADRUIMTE
+                                            </option>
+                                            <option value="binnen0">Binnenzijde laadruimte: Geen voorkeur</option>
+                                            <option value="binnen7">Binnenzijde laadruimte: 1x per week</option>
+                                            <option value="binnen14">Binnenzijde laadruimte: Elke 2 weken</option>
+                                            <option value="binnen21">Binnenzijde laadruimte: Elke 3 weken</option>
+                                            <option value="binnen28">Binnenzijde laadruimte: Elke 4 weken</option>
+                                            <option value="binnen35">Binnenzijde laadruimte: Elke 5 weken</option>
+                                            <option value="binnen42">Binnenzijde laadruimte: Elke 6 weken</option>
+                                            <option value="binnen49">Binnenzijde laadruimte: Elke 7 weken</option>
+                                            <option value="binnen56">Binnenzijde laadruimte: Elke 8 weken</option>
+                                            <option value="binnen63">Binnenzijde laadruimte: Elke 9 weken</option>
+                                            <option value="binnen70">Binnenzijde laadruimte: Elke 10 weken</option>
+                                            <option value="binnen90">Binnenzijde laadruimte: Elke 3 maanden</option>
+                                            <option value="binnen120">Binnenzijde laadruimte: Elke 4 maanden</option>
+                                            <option value="binnen150">Binnenzijde laadruimte: Elke 5 maanden</option>
+                                            <option value="binnen180">Binnenzijde laadruimte: Elke 6 maanden</option>
+                                            <option value="binnen210">Binnenzijde laadruimte: Elke 7 maanden</option>
+                                            <option value="binnen240">Binnenzijde laadruimte: Elke 8 maanden</option>
+                                            <option value="binnen270">Binnenzijde laadruimte: Elke 9 maanden</option>
+                                            <option value="binnen300">Binnenzijde laadruimte: Elke 10 maanden</option>
+                                            <option value="binnen330">Binnenzijde laadruimte: Elke 11 maanden</option>
+                                            <option value="binnen360">Binnenzijde laadruimte: Elke 12 maanden</option>
+                                            <option value="binnen999">Nooit</option>
+                                        </select>
+                                        <input class="btn" type="submit" name="submit_wasfrequentie" value="Wijzigen">
+                                    </div>
+                                    <h4>Wijzig beheerder voertuigen:</h4>
+                                    <div>
+                                        <select size=1 name=kies_beheerder>
+                                            <option value="">Arjan van Pouderoyen</option>
+                                            <option value="153">arjan (arjan@uniquewebdesign.nl)</option>
+                                            <option value="69">Arjan test beheerderx (test1bc@uniquewebdesign.nl)
+                                            </option>
+                                            <option value="550">Piet Planner (info@uniquewebdesign.nl)</option>
+                                            <option value="216">test (test2@uniquewebdesign.nl)</option>
+                                            <option value="70">test (test1b@uniquewebdesign.nl)</option>
+                                        </select>
+                                        <input class="btn" name="submit_beheerder" type="submit" value="Wijzigen">
+                                    </div>
+                                    <h4>Wijzig standplaats voertuigen:</h4>
+                                    <div>
+                                        <select size=1 name=kies_standplaats>
+                                            <option value="">Geen standplaats</option>
+                                            <option value="Alblasserdam">Alblasserdam</option>
+                                            <option value="dfdsafdsfsd">dfdsafdsfsd</option>
+                                            <option value="Dordrecht">Dordrecht</option>
+                                            <option value="xxx">xxx</option>
+                                            <option value="Zwijndrecht">Zwijndrecht</option>
+                                            <option value="Zwitserland">Zwitserland</option>
+                                        </select>
+                                        anders, namelijk: <input type=text name=kies_standplaats2 class="txt2">
+                                        <input class="btn" name="submit_standplaats" type="submit" value="Wijzigen">
+                                    </div>
+
+                                    <input class="btnred" name="submit_delvoertuigen" type="submit"
+                                           value="VERWIJDER GESELECTEERDE VOERTUIGEN">
+                                </div>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="pagination">
+                <a class="firstpage button" href="#">Eerste</a>
+                <a class="prevpage" href="#"><i class="fal fa-angle-left"></i></a>
+                <p>1 - 50 van 83 voertuigen</p>
+                <a class="nextpage" href="/mijnpagina.php?onderdeel=voertuigen&page2=2#">
+                    <i class="fal fa-angle-right"></i>
+                </a>
+                <a class="lastpage button" href="/mijnpagina.php?onderdeel=voertuigen&page2=2">Laatste</a>
+                <div class="footer-right">
+                    <p class="rowsPage">RIJEN PER PAGINA</p>
+                    <select size=1 name=rijen_per_pagina id="rowsDisplay">
+                        <option value="10">10</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <!--einde voertuigen -->
+</div>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="main.js"></script>
+</body>
+</html>

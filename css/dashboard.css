@@ -1,0 +1,989 @@
+* {
+    box-sizing: border-box;
+}
+
+/* General */
+html {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 15px;
+    font-family: 'Open Sans', sans-serif;
+    color: #000;
+    font-weight: 600;
+    box-sizing: border-box;
+}
+
+h2 {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12pt;
+}
+
+span {
+    font-size: 14px;
+}
+
+b {
+    font-size: 16px;
+}
+/* End General classes */
+
+/* header */
+.header {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 21px 36px 21px 55px;
+    background-color: #ffffff;
+}
+
+.header a.logo {
+}
+
+.header a.logo img {
+    height: 44px;
+}
+
+a.servicelocatie {
+    border: 2px solid #0266a6;
+    border-radius: 4px;
+    padding: 10px 19px 8px 13px;
+    text-decoration: none;
+    color: #0266a6;
+    margin-right: 100px;
+}
+
+a.servicelocatie i.fal.fa-search {
+    padding: 0 5px 0 5px;
+}
+
+select.language {
+    padding: 4px 1px 4px 4px;
+    border-radius: 2px;
+    border: 2px solid #eeeeee;
+    display: inline-block;
+    color: #6f6f6f;
+}
+
+.header option {
+}
+
+.header .loggedin {
+}
+
+.header .loggedin .name {
+    display: inline-block;
+}
+
+.loggedin .name span {
+    padding: 0 10px 0 40px;
+}
+
+.header .loggedin .name a.logout {
+    border-left: 2px solid #eeeeee;
+    color: #0266a6;
+    padding-left: 15px;
+}
+
+.nav-button {
+    display: none;
+    border: 2px solid #0266a6;
+    height: 32px;
+    width: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.hamburger-one,
+.hamburger-two,
+.hamburger-three {
+    display: block;
+    width: 23px;
+    height: 2px;
+    background: #0266a6;
+    border-radius: 2px;
+    margin: 6px 5px;
+    transition: 0.6s;
+}
+
+.active .hamburger-one {
+    transform: rotate(35deg);
+    transform-origin: left center;
+    width: 28px;
+}
+
+.active .hamburger-two {
+    background: transparent;
+}
+
+.active .hamburger-three {
+    transform: rotate(-35deg);
+    transform-origin: left center;
+    width: 28px;
+}
+/* End Header */
+
+/* menu */
+.leftcol {
+    background-color: #0266a6;
+    width: 23%;
+    float: left;
+    height: 100%;
+    display: inline-table;
+}
+
+.hide {
+    display: none;
+}
+
+.leftcol p.klantnummer {
+    color: white;
+    text-decoration: none;
+    padding-left: 55px;
+    padding-top: 15px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.leftcol ul.menu {
+    padding: 0;
+}
+
+.leftcol ul.menu li.first {
+    background-color: #f7fafc;
+    border-left: solid #a8d328;
+    opacity: 1.0;
+}
+
+.leftcol ul.menu li:hover {
+    color: #c0e0f4;
+    opacity: 1.0;
+}
+
+.leftcol ul.menu li:hover a {
+    color: #e8fdff;
+}
+
+.leftcol ul.menu li a span {
+    margin-left: 10px;
+}
+
+.leftcol ul.menu .first a {
+    color: #262d37;
+}
+
+.leftcol ul.menu .first:hover a {
+    color: #262d37;
+}
+
+.leftcol li {
+    padding: 20px 0 20px 55px;
+    list-style-type: none;
+    opacity: 0.7;
+}
+
+.leftcol ul.menu li a {
+    color: #b2d0e4;
+    text-decoration: none;
+}
+
+.leftcol ul.menu li a span.dboard2 {
+}
+
+.leftcol ul.menu li a span.dboard10 {
+}
+
+.leftcol ul.menu li ul.menu4 {
+}
+
+.leftcol ul.menu li ul.menu4 li {
+}
+
+.leftcol ul.menu li ul.menu4 li a {
+}
+
+.leftcol ul.menu li a span.dboard11 {
+}
+
+.leftcol ul.menu li a span.dboard27 {
+}
+
+.leftcol ul.menu li a span.dboard26 {
+}
+
+.leftcol ul.menu li a span.dboard4 {
+}
+
+.leftcol ul.menu li a span.dboard5 {
+}
+
+.leftcol ul.menu li a span.dboard7 {
+}
+
+.leftcol ul.menu li a span.dboard8 {
+}
+
+.leftcol ul.menu li.uitloggen {
+    opacity: 1.0;
+}
+
+.leftcol ul.menu li.uitloggen a {
+    color: #e8fdff;
+    border: 2px white solid;
+    border-radius: 3px;
+    padding: 6px 19px 6px 19px;
+}
+
+.leftcol ul.menu li.uitloggen a span {
+    margin: 0;
+}
+
+.leftcol span.copyright {
+    font-size: 11px;
+    color: #b7cade;
+    display: table;
+    text-align: center;
+    width: 100%;
+
+}
+
+.rightcol {
+    width: 77%;
+    padding: 10px 50px 10px 45px;
+    float: left;
+}
+
+/* algemeen */
+.content {
+    background-color: #f7fafc;
+    width: 100%;
+    height: 100%;
+    display: table;
+}
+
+/* dashboard */
+.rightcol.dashboard {
+}
+
+.rightcol .hoofdknoppen {
+    padding: 10px 0 40px 0;
+    text-align: center;
+}
+
+.rightcol .hoofdknoppen img {
+    padding: 20px 10px 20px 10px;
+}
+
+.rightcol .hoofdknoppen a span {
+    text-align: center;
+    display: inline-block;
+    padding: 10px 10px 10px 10px;
+    color: #000000;
+    min-height: 38px;
+}
+
+.colblock {
+    background-color: #ffffff;
+    border: 1px solid #e8ecef;
+    border-radius: 4px;
+    width: calc(30% - 19px);
+    display: inline-block;
+    margin: 0 15px 0 15px;
+    padding: 5px;
+    overflow: hidden;
+    height: 185px;
+}
+
+.colblock:hover {
+    box-shadow: 0 0 10px 2px #e6e8ea;
+    border: 1px solid #4991bf;
+    cursor: pointer;
+}
+
+.colblock:hover a span {
+    color: #2478B3;
+}
+
+.colblock a.add_esc span {
+    margin-top: 19px;
+}
+
+.colblock a.add_voertuig span {
+    margin-top: 26px;
+}
+
+.rightcol .dashb_info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+
+.rightcol .dashb_info .links {
+    display: inline-block;
+    width: 50%;
+    padding: 0 20px 0 20px;
+}
+
+.rightcol .dashb_info .links .activiteit {
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.rightcol .dashb_info .links .datum {
+    font-size: 11px;
+    font-style: italic;
+    font-weight: 500;
+    padding-left: 10px;
+    color: #aeb0b1;
+}
+
+.rightcol .dashb_info .links table.inuwaccount {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 3%;
+    box-shadow: 0 0 10px 1px #e6e8ea;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr.color2 {
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr.color2 td.icon {
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr.color2 td.info2 {
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr.color2 td.info2 a {
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr {
+    background-color: #ffffff;
+    border: 1px solid #e6eaee;
+    height: 45px;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr:hover {
+    background-color: #f2f7fa;
+    cursor: pointer;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr:hover td.info2 a {
+    color: #0b5195;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr:hover td.info2 img {
+    content: url("../images/dashboard/icon_arrow_right_active.png");
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr:hover a span {
+    color: #0b5195;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr td.icon {
+    float: left;
+    padding: 10px 5px 10px 28px;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr td.info2 {
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr td.info2 img {
+    float: right;
+    margin-right: 20px;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr td.info2 a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #000000;
+    font-weight: lighter;
+}
+
+.rightcol .dashb_info .links table.inuwaccount tr td.info2 a span {
+    font-weight: bold;
+}
+
+.rightcol .dashb_info .rechts {
+    display: inline-block;
+    width: 50%;
+    padding: 0 20px 0 20px;
+}
+
+.rightcol .dashb_info .rechts h2 {
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren {
+    border-collapse: collapse;
+    margin-top: 2.4%;
+    box-shadow: 0 0 10px 1px #e6e8ea;
+    width: 100%;
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr {
+    background-color: #ffffff;
+    border: 1px solid #e6eaee;
+    height: 50px;
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr span.voorkeurenlinks {
+    padding-left: 20px;
+    display: block;
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr:hover {
+    background-color: #f2f7fa;
+    cursor: pointer;
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr td {
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr td a {
+    text-decoration: none;
+    color: #2478B3;
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr:hover td a img {
+    content: url("../images/dashboard/icon_arrow_right_active.png");
+}
+
+.rightcol .dashb_info .rechts table.voorkeuren tr td a img {
+    float: right;
+    margin-right: 5px;
+}
+
+.rightcol .dashb_info .rechts tr.color2 {
+}
+
+.rightcol .dashb_info .rechts tr.color2 td {
+}
+
+.rightcol .dashb_info .rechts tr.color2 td a {
+}
+
+.rightcol .dashb_info tr {
+}
+
+.rightcol .dashb_info tr td {
+}
+
+.rightcol .dashb_info tr td a {
+}
+
+.rightcol tr.color2 {
+}
+
+.rightcol tr.color2 td {
+
+}
+
+.rightcol tr.color2 td a {
+}
+
+/* algemeen */
+
+.rightcol .title h2 {
+    font-size: 14px;
+    display: inline-block;
+    margin-bottom: 25px;
+    margin-top: 28px;
+    color: #404040;
+}
+
+.rightcol .title a.btn.btn-green, a.btn.btn-green {
+    background-color: #a8d328;
+    text-decoration: none;
+    padding: 10px 25px 10px 10px;
+    display: inline-block;
+    border-radius: 4px;
+    margin: 20px;
+}
+
+.voertuigenToevoegen {
+    float: right;
+}
+
+.rightcol .title a.btn.btn-green span, a.btn.btn-green span {
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.rightcol .title a.btn.btn-green img, a.btn.btn-green img {
+    padding-right: 10px;
+}
+
+.rightcol p {
+    font-weight: lighter;
+}
+
+.rightcol p strong {
+    font-weight: 600;
+    color: #2478B3;
+}
+
+.rightcol p strong span {
+    color: #000000;
+}
+
+.rightcol .whiteblock {
+    display: grid;
+    background-color: #ffffff;
+    border: 1px solid #e6eaee;
+    border-radius: 3px;
+    box-shadow: 0 0 10px 1px #e6e8ea;
+    padding: 5px 0;
+}
+
+.rightcol .whiteblock .zoek1 {
+    padding: 0 10px;
+}
+
+.rightcol .whiteblock .zoek1 a {
+    margin: 10px 10px 10px 10px;
+}
+
+.rightcol .whiteblock .zoek2 {
+    border-top: 2px solid #f3f5f7;
+    display: none;
+    width: calc(100% - 2px);
+}
+
+.rightcol .whiteblock .zoek2 h5 {
+    color: #2478B3;
+    margin: 35px 10px 30px 29px;
+    display: inline-block;
+}
+
+.rightcol .whiteblock .zoek2 a.hideSearch {
+    display: inline-block;
+    float: right;
+    text-decoration: none;
+    border: 2px solid #dbdbdb;
+    border-radius: 4px;
+    padding: 8px 22px;
+    color: #949494;
+    margin: 5px 30px 0 0;
+}
+
+.rightcol .whiteblock .zoek2 a.hideSearch i {
+    font-size: 17px;
+    font-weight: bold;
+    padding-right: 10px;
+}
+
+.rightcol .whiteblock .zoek2 {
+}
+
+.rightcol .whiteblock .zoek2 .tableWasgeschiedenis {
+    margin: 10px 10px 5px 20px;
+    width: calc(65% - 30px);
+}
+
+.rightcol .whiteblock .zoek2 .selectType {
+    color: #2478B3;
+    width: 100px;
+    font-size: 14px;
+}
+
+.rightcol .whiteblock .zoek2 .selectContent {
+    width: 100px;
+}
+
+.rightcol .whiteblock .zoek2 .selectStay {
+    width: 160px;
+}
+
+.rightcol .whiteblock .zoek2 .btnSearch {
+    background-color: #0266a6;
+    height: 37px;
+    width: 420px;
+    border: none;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.rightcol .whiteblock .zoek2 select {
+    width: 50px;
+    height: 37px;
+    color: #949494;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding-left: 8px;
+    margin-left: 5px;
+}
+
+.rightcol .whiteblock .zoek2 select.selectMonth {
+    width: 100px;
+}
+
+.rightcol .whiteblock .zoek2 select.selectYear {
+    width: 75px;
+}
+
+.rightcol .whiteblock .zoek2 select.selectProgram {
+    width: 243px;
+}
+
+.rightcol .whiteblock .zoek2 select.selectStayContent {
+    width: 243px;
+}
+
+.rightcol .whiteblock .zoek2 input.inputContent {
+    width: 243px;
+    height: 37px;
+    color: #949494;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    padding-left: 8px;
+    margin-left: 5px;
+}
+
+
+.rightcol .whiteblock .zoeken h5 {
+    padding-left: 35px;
+    color: #2478B3;
+}
+
+.rightcol .whiteblock .zoeken input,
+.rightcol .whiteblock .zoeken select {
+    height: 37px;
+    color: #949494;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    width: 180px;
+    margin: 5px 5px;
+    padding: 0 15px;
+    font-size: 14px;
+}
+
+.rightcol .whiteblock .zoeken input.btn {
+    background-color: #0266a6;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+    padding: 0 15px;
+}
+
+.rightcol .aantal {
+    margin: 25px 0;
+}
+
+.rightcol .aantal .page {
+    text-align: center;
+    color: #2478B3;
+    font-size: 14px;
+}
+
+.rightcol .aantal .page span {
+    font-weight: 700;
+}
+
+table.overzicht {
+    border-collapse: collapse;
+    box-shadow: 0 0 10px 2px #e6e8ea;
+    width: 100%;
+}
+
+table.overzicht td.kenteken a {
+    font-weight: 600;
+}
+
+table.overzicht a {
+    text-decoration: none;
+    color: #2478B3;
+}
+
+table.overzicht tr:hover {
+    background-color: #f2f7fa;
+}
+
+table.overzicht tr.title-row {
+    background-color: #0266a6;
+    color: #ffffff;
+    height: 40px;
+}
+
+table.overzicht tr:first-child td:first-child {
+    border-top-left-radius: 4px;
+}
+
+table.overzicht tr:first-child td:last-child {
+    border-top-right-radius: 4px;
+}
+
+table.overzicht tr.title-row td {
+    font-weight: 600;
+}
+
+table.overzicht tr {
+    border-top: 1px solid #dbdbdb;
+}
+
+table.overzicht tr td {
+    font-weight: lighter;
+}
+
+table.overzicht tr.color {
+}
+
+table.overzicht tr.color td {
+}
+
+.rightcol .pagination {
+}
+
+.rightcol .pagination .left {
+}
+
+.rightcol .pagination .left a.firstpage {
+}
+
+.rightcol .pagination .left a.prevpage {
+}
+
+.rightcol .pagination .left a.prevpage i.fal.fa-angle-left {
+}
+
+.rightcol .pagination .page {
+}
+
+.rightcol .pagination .right {
+}
+
+.rightcol .pagination .right a.nextpage {
+}
+
+.rightcol .pagination .right a.nextpage i.fal.fa-angle-right {
+}
+
+.rightcol .pagination .right a.lastpage {
+}
+
+.dropdown-content {
+    display: none;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown {
+    position: relative;
+    display: block;
+}
+
+.dropdown-content a {
+    color: #000000;
+    padding-left: 10px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.dropdown-content li {
+    padding: 20px 15px 0 1px;
+}
+
+.overzicht td {
+    padding: 0 11px;
+}
+
+.checkimg {
+    padding-right: 10px;
+}
+
+td.first {
+    padding: 15px;
+}
+
+td.first input {
+    width: 20px;
+    height: 20px;
+}
+
+td.tooltipRow {
+    font-weight: bold !important;
+}
+
+.rightcol .wijzigen {
+    display: grid;
+}
+
+.rightcol .wijzigen div h4 {
+    color: #2478B3;
+    font-weight: 500;
+}
+
+.rightcol .wijzigen div select {
+    width: 30%;
+    height: 37px;
+    color: #949494;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+.rightcol .wijzigen div input {
+    margin: 10px;
+    padding: 10px;
+    color: #949494;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+}
+
+.rightcol .wijzigen div input.btnred {
+    margin-left: 0;
+    background: transparent;
+    font-size: 12px;
+    border: 2px solid #c1c1c1;
+    font-weight: 600;
+    color: #5a5a5a;
+}
+
+.rightcol .wijzigen div input.btnred:hover {
+    cursor: pointer;
+}
+
+.rightcol .wijzigen div input.btn {
+    background-color: #0266a6;
+    width: 100px;
+    color: #ffffff;
+    border: none;
+    text-align: center;
+}
+
+table.overzicht tr.tableFooter {
+    border: none;
+    padding: 0;
+}
+
+.download {
+    margin-right: 20px;
+}
+
+div.pagination {
+    text-align: center;
+}
+
+div.pagination p {
+    display: inline-block;
+}
+
+div.pagination a {
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+div.pagination a.button,
+div.pagination a i {
+    text-decoration: none;
+    color: black;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    transition: background 0.1s linear;
+    padding: 10px;
+}
+
+div.pagination a.button:hover,
+div.pagination a i:hover {
+    color: black;
+    cursor: pointer;
+    background-color: #e0e0e0;
+}
+
+div.pagination,
+div.pagination a i {
+    padding: 13px 20px;
+}
+
+.pagination .footer-right {
+    float: right;
+}
+
+select#rowsDisplay {
+    margin: 0 -22px 0 5px;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+.verbergVoertuigen,
+.toonVoertuigen {
+    background-color: #ffffff;
+    text-decoration: none;
+    padding: 10px 20px 10px 20px;
+    float: right;
+    display: inline-block;
+    border: #6f6f6f 1px solid;
+    border-radius: 4px;
+    color: #6f6f6f;
+    margin: 8px;
+}
+
+.zoekenVoertuigen {
+     margin: 10px 15px;
+ }
+
+/* Tooltip classes */
+.tooltip {
+    position: relative;
+    color: #2478B3;
+    cursor: pointer;
+}
+
+.tooltip span {
+    visibility: hidden;
+    width: 175px;
+    background-color: #ffffff;
+    color: #a0a0a0;
+    font-weight: normal;
+    text-align: center;
+    padding: 5px 0;
+    position: absolute;
+    left: -20px;
+    bottom: 30px;
+    margin-left: -60px;
+    z-index: 1;
+    opacity: 0;
+    border-radius: 2px;
+    transition: opacity 0.2s;
+    border: 1px solid #dbdbdb;
+}
+
+.tooltip span::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border: 10px solid transparent;
+    border-top-color: #dbdbdb;
+}
+
+.tooltip span strong {
+    color: #2478B3;
+}
+
+.tooltip:hover span {
+    visibility: visible;
+    opacity: 1;
+}
+/* End Tooltip classes */
+
+/* Handy classes */
+.inline {
+    display: inline-block;
+}
+/* End hendy classes */

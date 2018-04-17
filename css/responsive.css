@@ -1,0 +1,305 @@
+/*
+	Please add all responsive styles here on these breakdowns.
+*/
+
+/* 1440 */
+@media only screen and (max-width: 1599px) {
+}
+
+/* 1366 */
+@media only screen and (max-width: 1439px) {
+}
+
+/* 1280 */
+@media only screen and (max-width: 1365px) {
+}
+
+/* 1024 */
+@media only screen and (max-width: 1279px) {
+
+    .scrollflow {
+        overflow-x: scroll;
+    }
+
+    /* Index */
+    .rightcol .hoofdknoppen {
+        padding-bottom: 10px;
+    }
+
+    .rightcol .dashb_info .rechts,
+    .rightcol .dashb_info .links {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .rightcol .voertuigen {
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+
+    .rightcol span.datum {
+        display: none;
+    }
+    /* End Index */
+
+    /* Wasgeschidenis */
+    td.last {
+        margin-right: 5px;
+    }
+    /* End Wasgeschidenis */
+}
+
+/* 800 */
+@media only screen and (max-width: 1023px) {
+
+    .leftcol ul.menu li, p.klantnummer  {
+        padding-left: 10px !important;
+    }
+
+    /* Voertuigen */
+    .rightcol .whiteblock .zoeken input, .rightcol .whiteblock .zoeken select, .rightcol .whiteblock .zoeken input.btn {
+        width: calc(100% - 10px);
+    }
+    /* End Voertuigen */
+
+}
+
+/* 768 */
+@media only screen and (max-width: 799px) {
+
+    .header {
+        padding: 10px;
+    }
+
+    .rightcol {
+        width: 100%;
+    }
+
+    .leftcol {
+        position: absolute;
+        right: 100%;
+        width: 80%;
+        transition: 0.6s;
+    }
+
+    .hide {
+        display: block;
+        width: calc(100% - 20px);
+    }
+
+    select.language {
+        width: 100%;
+        margin: 0 10px;
+        padding: 5px 0;
+    }
+
+    .menu li {
+        padding: 10px !important;
+    }
+
+    .leftcol ul.menu li.uitloggen a {
+        padding: 6px 60px;
+    }
+
+    /* Index */
+    .header .loggedin,
+    .header .servicelocatie {
+        display: none;
+    }
+
+    .hide .servicelocatie {
+        display: inline-block;
+        color: #ffffff;
+        border-color: #ffffff;
+        margin: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .colblock {
+        margin-bottom: 10px;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .rechts,
+    .links {
+        padding: 0 !important;
+    }
+
+    .nav-button {
+        display: block;
+    }
+
+    .content {
+        position: relative;
+    }
+
+    .toggle {
+        display: block;
+        z-index: 1;
+        right: 20%;
+    }
+
+    .overlay {
+        visibility: hidden;
+        transition: 0.6s ease-in-out;
+        position: absolute;
+        background: none;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
+
+    .gray {
+        visibility: visible;
+        background: rgba(50, 50, 50, 0.7);
+    }
+    /* End Index */
+
+    /* Voertuigen */
+    .rightcol div.wijzig input,
+    .rightcol div.wijzig select,
+    .rightcol div.wijzig input,
+    .rightcol div.wijzig input.btn {
+        width: calc(100% - 13px);
+        margin: 3px 0 3px 0;
+    }
+
+    .rightcol .footer-right {
+        float: none;
+    }
+
+    div.pagination a i {
+        padding: 0 10px;
+    }
+
+    .rightcol div.pagination a.prevpage,
+    .nextpage {
+        border: 1px solid #dbdbdb;
+        border-radius: 4px;
+        padding: 10px;
+    }
+
+    .rightcol div.pagination a i {
+        border: none;
+    }
+    /* End Voertuigen */
+
+}
+
+/* 640 */
+@media only screen and (max-width: 767px) {
+
+    .rightcol {
+        padding: 30px 35px;
+        display: grid;
+    }
+
+    .rightcol .whiteblock {
+         padding: 0;
+    }
+
+    /* Index */
+    .rightcol .dashb_info .rechts table.voorkeuren td {
+        padding-left: 20px;
+        display: block;
+    }
+
+    .rightcol .dashb_info .rechts table.voorkeuren tr span.voorkeurenlinks {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .rightcol .dashb_info .rechts table.voorkeuren tr a {
+        padding-left: 0;
+    }
+
+    .rightcol .dashb_info .rechts table.voorkeuren td:nth-of-type(2) {
+        padding-bottom: 10px;
+    }
+    /* End Index*/
+
+    /* Wasgeschidenis */
+    .rightcol .whiteblock .zoek1 a {
+        display: block;
+        text-align: center;
+    }
+    /* End Wasgeschidenis */
+
+    /* Voertuigen */
+    .rightcol .title a {
+        width: 100%;
+        margin: 0!important;
+        text-align: center;
+    }
+    /* End Voertuigen */
+}
+
+/* 600 */
+@media only screen and (max-width: 639px) {
+}
+
+/* 480 */
+@media only screen and (max-width: 599px) {
+
+    /* Index */
+    .rightcol .hoofdknoppen {
+        text-align: unset;
+    }
+
+    .colblock {
+        width: calc(100% - 40px);
+    }
+
+    .rightcol {
+        padding: 10px 10px;
+    }
+
+    .rightcol .dashb_info .links table.inuwaccount tr td.icon, .rightcol .dashb_info .rechts table.voorkeuren td {
+        padding-left: 10px;
+    }
+    /* End Index */
+}
+
+/* 375 */
+@media only screen and (max-width: 479px) {
+
+    /* Used in Wasgeschidenis and Voertuigen */
+    .pagination a {
+        display: block;
+        width: calc(100% - 5px);
+        background-color: #ffffff;
+        margin: 5px !important;
+    }
+    /* End */
+}
+
+/* 360 */
+@media only screen and (max-width: 430px) {
+
+    .rightcol .dashb_info .rechts table.voorkeuren td img, .rightcol .dashb_info .links table.inuwaccount tr td.info2 img {
+        display: none;
+    }
+}
+
+/* 360 */
+@media only screen and (max-width: 374px) {
+}
+
+/* 320 */
+@media only screen and (max-width: 359px) {
+
+    .leftcol ul.menu li.uitloggen a {
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    /* Index */
+    .rightcol .dashb_info .links table.inuwaccount tr td.info2 {
+        padding: 10px 10px 5px 5px;
+    }
+    /* End Index */
+
+}
